@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class="mb-4">
+    <form id="askAiForm" method="post">
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <textarea class="form-control" id="aiPrompt" name="prompt" rows="3" placeholder="Type your question here..."></textarea>
+        </div>
+        <button type="button" id="sendPrompt">Ask AI</button>
+    </form>
+
+
+    <div class="mt-3">
+        <label><strong>AI Response:</strong></label>
+        <div class="border p-3 bg-light" id="aiResponse" style="min-height: 100px;"></div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#sendPrompt').click(function (e) {
+            e.preventDefault();
+
+            const prompt = $('#aiPrompt').val().trim();
+            if (!prompt) {
+                alert("Please enter a prompt.");
+                return;
+            }
+
+            $('#aiResponse').html("Thinking...");
+
+            const token = $('input[name="__RequestVerificationToken"]').val();
+
+            $.ajax({
+                url: '/ai/askopenai',
+                type: 'POST',
+                data: {
+                    prompt: prompt,
+                    __RequestVerificationToken: token
+                },
+                success: function (data) {
+                    $('#aiResponse').html('<pre>' + (data.response ?? "No response returned.") + '</pre>');
+                },
+                error: function () {
+                    $('#aiResponse').html("Error contacting AI service.");
+                }
+            });
+        });
+    </script>
+}
+
