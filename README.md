@@ -31,12 +31,54 @@ This project demonstrates how to integrate **Azure OpenAI (via Azure Foundry)** 
 
 ---
 
+Sure! Here's the **tidied-up version** of your `🚀 Getting Started` section, now including:
+
+* Clean instructions for cloning.
+* A reference to the Foundry setup file (`AI_Foundry.md` or `AzureFoundrySetup.md`).
+* A recommended learning module from Microsoft Learn.
+
+---
+
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/xxxxxxxxx.git
-cd xxxxxx
+git clone https://github.com/yourusername/Simple-AI-Integration-MVC.git
+cd Simple-AI-Integration-MVC
+```
 
+### 2. Configure Your Azure OpenAI Settings
+
+Update the `appsettings.json` file with your Azure AI Foundry credentials:
+
+```json
+"AzureOpenAISettings": {
+  "Endpoint": "https://your-foundry-endpoint/",
+  "ApiKey": "your-api-key-here",
+  "DeploymentName": "gpt-4o"
+}
+```
+
+> 🔐 **Important**: Never commit your API keys. Use [User Secrets](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets) or [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview) in production environments.
+
+### 3. Deploy the Model in Azure AI Foundry
+
+Follow the step-by-step guide in [`AI_Foundry.md`](AI_Foundry.md) to deploy a model (like `gpt-4o`) and retrieve your API credentials.
+
+---
+
+## 📘 Recommended Learning
+
+Want to learn more about Azure AI and OpenAI integration?
+
+Check out this official **Microsoft Learn** collection:
+🔗 [Build intelligent apps with Azure OpenAI](https://learn.microsoft.com/en-us/collections/50wkaqtq50egz3?source=docs&tab=credentials-tab)
+
+This curated set of modules covers:
+
+* Azure OpenAI model usage
+* Prompt engineering
+* Real-world integrations
+* Responsible AI practices
 
