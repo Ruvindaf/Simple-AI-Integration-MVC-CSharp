@@ -86,9 +86,9 @@ This curated set of modules covers:
 * Responsible AI practices
 
 ## The Code needs to be added
-1. AI_Test2/Controllers/AiController.cs
-2. AI_Test2/Settings/AzureOpenAISettings.cs
-3. AI_Test2/Program.cs
-4. AI_Test2/Views/Home/Index.cshtml
-5. AI_Test2/appsettings.json
+1. [AiController.cs](https://github.com/Ruvindaf/Simple-AI-Integration-MVC-CSharp/blob/218ef9ad404644880a4c16ca85225813b2b79b23/AiController.cs)
+2. [AzureOpenAISettings.cs](https://github.com/Ruvindaf/Simple-AI-Integration-MVC-CSharp/blob/218ef9ad404644880a4c16ca85225813b2b79b23/AzureOpenAISettings.cs)
+3. [Program.cs](https://github.com/Ruvindaf/Simple-AI-Integration-MVC-CSharp/blob/218ef9ad404644880a4c16ca85225813b2b79b23/Program.cs)
+4. [Index.cshtml](https://github.com/Ruvindaf/Simple-AI-Integration-MVC-CSharp/blob/218ef9ad404644880a4c16ca85225813b2b79b23/Index.cshtml)
+5. [appsettings.json](https://github.com/Ruvindaf/Simple-AI-Integration-MVC-CSharp/blob/218ef9ad404644880a4c16ca85225813b2b79b23/appsettings.json)
 
