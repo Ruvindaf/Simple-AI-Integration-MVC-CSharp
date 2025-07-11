@@ -20,6 +20,8 @@ This project demonstrates how to integrate **Azure OpenAI (via Azure Foundry)** 
 - ASP.NET Core MVC (.NET 6 or later)
 - Azure OpenAI (gpt-4o deployment)
 - Azure SDK (`Azure.AI.OpenAI`)
+  <img width="810" height="109" alt="image" src="https://github.com/user-attachments/assets/42724f01-3fbf-4001-abe6-8a2600b59ea3" />
+
 - jQuery / AJAX
 - C#
 
@@ -27,7 +29,8 @@ This project demonstrates how to integrate **Azure OpenAI (via Azure Foundry)** 
 
 ## 🖼️ Demo Screenshot
 
-<img width="1039" height="603" alt="Screenshot 2025-07-11 215255" src="https://github.com/user-attachments/assets/93b5a55e-9417-4994-b582-2027601d45bb" />
+<img width="1908" height="939" alt="image" src="https://github.com/user-attachments/assets/8900701a-3cf1-4ec0-b9e7-ad46b48dd79e" />
+
 
 ---
 
@@ -81,4 +84,11 @@ This curated set of modules covers:
 * Prompt engineering
 * Real-world integrations
 * Responsible AI practices
+
+## The Code needs to be added
+1. AI_Test2/Controllers/AiController.cs
+2. AI_Test2/Settings/AzureOpenAISettings.cs
+3. AI_Test2/Program.cs
+4. AI_Test2/Views/Home/Index.cshtml
+5. AI_Test2/appsettings.json
 
